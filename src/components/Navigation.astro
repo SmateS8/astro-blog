@@ -1,5 +1,8 @@
+---
+import '../styles/global.css'
+---
 <nav >
-    <h2>LOGO</h2>
+    <p>LOGO</h2>
     <div>
     <a href="/">Home</a>
     <a href="/about">About</a>
@@ -15,14 +18,29 @@
 }
 nav{
     width: 100%;
-    padding: 1rem;
-    margin: 0%;
+    padding: 0.5rem 0 1rem 0;
+    border-bottom: dashed 2px #000411;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+nav a {
+    /* Styled in 'src/styles/global.css' */
+    transition: all 100ms;
+}
+nav a:hover{
+    color: #EFCB68;
+    transition: all 200ms;
+}
 div{
     gap: 1rem;
+}
+p{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -3px;
+    cursor: pointer;
 }
 </style>
