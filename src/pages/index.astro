@@ -1,22 +1,30 @@
 ---
-import Navbar from '../components/Navigation.astro'
-import '../styles/global.css'
+import Navbar from "../components/Navigation.astro";
+import "../styles/global.css";
+const finished = true;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Navbar/>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Navbar />
+    <h1>Astro</h1>
+    <p>Iam building this blog to learn how to create websites with Astro</p>
+    <h2>Project State</h2>
+    {
+      finished ? (
+        <p>The project is finished!!</p>
+      ) : (
+        <p>The project is not finished yet, Iam still working on it!</p>
+      )
+    }
+  </body>
 
-
-	<style>
-	</style>
+  <style></style>
 </html>
