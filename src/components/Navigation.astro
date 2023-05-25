@@ -1,22 +1,25 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
+import { Icon } from "astro-icon";
 ---
-<nav >
-    <p>LOGO</h2>
-    <div>
+
+<nav>
+  <p>LOGO</p>
+  <div class="links-wrapper">
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-    </div>
-</div>
+  </div>
+  <Icon name="fa-solid:hamburger" />
+</nav>
 
 <style>
-* {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-nav{
+  }
+  nav {
     width: 100%;
     padding: 0.5rem 0 1rem 0;
     border-bottom: dashed 2px #000411;
@@ -25,22 +28,40 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-nav a {
+  }
+  nav a {
     /* Styled in 'src/styles/global.css' */
     transition: all 100ms;
-}
-nav a:hover{
-    color: #EFCB68;
+  }
+  nav a:hover {
+    color: #efcb68;
     transition: all 200ms;
-}
-div{
+  }
+  div {
     gap: 1rem;
-}
-p{
+  }
+  p {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -3px;
     cursor: pointer;
-}
+  }
+  .links-wrapper {
+    display: none;
+  }
+  @media (min-width: 737px) {
+    [astro-icon="fa-solid:hamburger"] {
+      display: none;
+    }
+    .links-wrapper {
+      display: block;
+    }
+  }
+  [astro-icon="fa-solid:hamburger"] {
+    height: 2rem;
+    transition: all 200ms;
+  }
+  [astro-icon="fa-solid:hamburger"]:hover {
+    color: #efcb68;
+  }
 </style>
